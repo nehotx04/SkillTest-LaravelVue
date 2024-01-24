@@ -8,6 +8,14 @@
 The challenge will contain a few core features most applications have. That includes connecting to an API, basic MVC, exposing an API, and finally tests.
 
 ### Important
+To access the administrator routes, use the '/admin' route and you will be redirected to the administration. 
+Before trying to get into the administration, you must use php artisan migrate --seed to create the administrator user.
+ 
+the administrator credentials are:
+    email: admin@admin.com
+    password: admin
+
+
 Create the frontend in the same project/repo as the backend
 
 The API we want you to connect to is [https://dummyjson.com/docs/quotes](https://dummyjson.com/docs/quotes)

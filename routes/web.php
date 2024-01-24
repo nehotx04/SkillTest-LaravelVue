@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+// Route::get('/login', function () {return view('auth/login');});
+// Route::get('/register', function () {return view('auth/register');});
+
+Route::group(['prefix' => 'quotes', 'middleware' => 'auth'], function () {
+        Route::get('/random', function () {return view('quotes/random');})->name('quotes.random');
+        Route::get('/favorites', function () {return view('quotes/favorites');})->name('quotes.favorites');
 });
+Auth::routes();
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

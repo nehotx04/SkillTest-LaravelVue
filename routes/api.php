@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\QuotesController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::post('/register', [UserController::class, 'register']);
+// Route::post('/login', [UserController::class, 'login']);
+
+Route::group(['prefix' => 'quotes'], function () {
+    Route::get('/random', [QuotesController::class, 'getFiveQuotes']);
+    Route::get('/favorites', [QuotesController::class, 'getFavorites']);
+    Route::delete('/favorite/delete/{id}', [QuotesController::class, 'deleteFavorite']);
+    Route::post('/addFavorite', [QuotesController::class, 'markAsFavorite']);
 });

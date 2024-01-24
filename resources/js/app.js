@@ -1,6 +1,10 @@
-import "./bootstrap";
-import { createApp } from "vue";
-import app from "./layouts/app.vue";
-import vuetify from "./vuetify";
+import { createApp } from 'vue/dist/vue.esm-bundler';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import Random from './components/Random.vue';
+import Favorites from './components/Favorites.vue';
 
-createApp(app).use(vuetify).mount("#app");
+const app = createApp({});
+app.component('Random', Random);
+app.component('Favorites', Favorites);
+app.mount("#app");

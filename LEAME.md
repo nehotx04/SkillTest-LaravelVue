@@ -17,13 +17,13 @@ La API a la que queremos que te conectes es https://quotes.rest/
     * Debe haber un botón junto a cada cita para guardarla en tus favoritos
 * Una página que muestre tus favoritos guardados
     * Debe haber un botón para eliminar una cita de tus favoritos
-* Implementar límites de velocidad para las solicitudes de la API a `https://quotes.rest/` para evitar el abuso.
-    * La API debe estar limitada a 30 solicitudes por minuto.
+Hacer despues de la autenticacion de usuarios -* Implementar límites de velocidad para las solicitudes de la API a `https://quotes.rest/` para evitar el abuso.
+    Hacer despues de la autenticacion de usuarios -* La API debe estar limitada a 30 solicitudes por minuto.
 * Autenticación de administrador por separado para moderar las citas de usuario guardadas y prohibir usuarios
 * El frontend debe hacerse con Vue.js y opcionalmente Inertia.js
     * TypeScript debe usarse para cualquier funcionalidad del frontend
     * La interfaz de usuario debe ser receptiva
-* Debe estar disponible una ruta de API para recuperar un número especificado de citas aleatorias de Kayne West
+    * Error en documentacion, no existe ninguna frase de kayne west en la api -- Debe estar disponible una ruta de API para recuperar un número especificado de citas aleatorias de Kayne West.
 * Debe estar disponible una ruta de API para recuperar tus citas favoritas
 * Debe estar disponible una ruta de API para eliminar una cita de tus favoritos
 * Todas las rutas de la API deben estar aseguradas con un token de usuario
